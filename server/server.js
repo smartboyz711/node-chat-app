@@ -18,7 +18,7 @@ io.on('connection',(socket) => {
         from : 'Admin',
         text : 'Welcome to the chat app',
         createAt : new Date().getTime()
-    })
+    });
 
     socket.broadcast.emit('newMessage',{
         from : 'Admin',
@@ -32,7 +32,7 @@ io.on('connection',(socket) => {
             from : message.from,
             text : message.text,
             createAt : new Date().getTime()
-        })
+        });
         // socket.broadcast.emit('newMessage',{
         //     from : message.from,
         //     text : message.text,
@@ -42,7 +42,7 @@ io.on('connection',(socket) => {
 
     socket.on('disconnect',() => {
         console.log('User was Disconnected');
-    })
+    });
 });
 
 server.listen(port,()=>{
