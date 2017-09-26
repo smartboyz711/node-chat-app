@@ -8,3 +8,13 @@ socket.on('disconnect', function() {
 socket.on('newMessage', function(newMessage) {
     console.log('New message',newMessage)
 });
+socket.emit('createMessage',{
+    from : 'Frank',
+    text : 'hi'
+}, function (data) {
+    console.log('Got it',data);
+});
+
+jQuery('#message-form').on('submit', function (e) {
+    e.preventDefault();
+});
