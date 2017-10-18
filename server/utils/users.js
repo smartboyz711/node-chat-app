@@ -7,6 +7,15 @@ class Users {
         this.users.push(user);
         return user;
     }
+    removeUser (id) {
+
+    }
+    getUser (id) {
+
+    }
+    getUserList (room) {
+        ['Mike','Jen','Cal']
+    }
 }
 
 module.exports = {Users};
